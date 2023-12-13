@@ -4,7 +4,7 @@ var Userdb = require('../model/dinochar');
 exports.create = (req,res)=>{
     // validate request
     if(!req.body){
-        res.status(400).send({ message : "Content can not be emtpy!"});
+        res.status(400).send({ message : "El contenido no puede estar vacío!"});
         return;
     }
 
