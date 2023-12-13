@@ -9,11 +9,11 @@ exports.create = (req,res)=>{
     }
 
     // new user
-    const user = new Userdb({
+    const user = new Dinodb({
         name : req.body.name,
-        email : req.body.email,
+        alias : req.body.alias,
         gender: req.body.gender,
-        status : req.body.status
+        picture : req.body.picture
     })
 
     // save user in the database
@@ -25,7 +25,7 @@ exports.create = (req,res)=>{
         })
         .catch(err =>{
             res.status(500).send({
-                message : err.message || "Some error occurred while creating a create operation"
+                message : err.message || "Ocurrió un error al crear el archivo."
             });
         });
 
@@ -40,13 +40,13 @@ exports.find = (req, res)=>{
         Userdb.findById(id)
             .then(data =>{
                 if(!data){
-                    res.status(404).send({ message : "Not found user with id "+ id})
+                    res.status(404).send({ message : "No se encopntró al personaje con el id "+ id})
                 }else{
                     res.send(data)
                 }
             })
             .catch(err =>{
-                res.status(500).send({ message: "Erro retrieving user with id " + id})
+                res.status(500).send({ message: "Ocurrió un error al consultar el personaje con el id " + id})
             })
 
     }else{
@@ -55,7 +55,7 @@ exports.find = (req, res)=>{
                 res.send(user)
             })
             .catch(err => {
-                res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
+                res.status(500).send({ message : err.message || "Ocurrió un error al consultar el archivo."})
             })
     }
 
