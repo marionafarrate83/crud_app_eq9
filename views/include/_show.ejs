@@ -1,11 +1,11 @@
 <% for(var i = 0; i < users.length; i++) { %>
     <tr>
         <td><%= i + 1 %></td>
-        <td><img src="https://static.wikia.nocookie.net/dinosaurs/images/6/61/Tyrannosaurus-rex.73505.jpg" alt="pic" height="50px" width="50px"></td>
+        <td><img src=" <%= users[i].picture %>  " alt=""></td>
         <td><%= users[i].name %></td>
-        <td><%= users[i].email %></td>
+        <td><%= users[i].alias %></td>
         <td><%= users[i].gender %></td>
-        <td><%= users[i].status %></td>
+        <td></td>
         <td>
             <a href="/update-user?id=<%= users[i]._id%>" class="btn border-shadow update">
                 <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
