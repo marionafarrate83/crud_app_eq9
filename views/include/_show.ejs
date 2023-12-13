@@ -1,15 +1,15 @@
-<% for(var i = 0; i < users.length; i++) { %>
+<% for(var i = 0; i < dinos.length; i++) { %>
     <tr>
         <td><%= i + 1 %></td>
-        <td><img src="<%= users[i].picture %>"></td>
-        <td><%= users[i].name %></td>
-        <td><%= users[i].alias %></td>
-        <td><%= users[i].gender %></td>
+        <td><img src="<%= dinos[i].picture %>" alt="foto" height="50px"></td>
+        <td><%= dinos[i].name %></td>
+        <td><%= dinos[i].alias %></td>
+        <td><%= dinos[i].gender %></td>
         <td>
-            <a href="/update-user?id=<%= users[i]._id%>" class="btn border-shadow update">
+            <a href="/update-user?id=<%= dinos[i]._id%>" class="btn border-shadow update">
                 <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
             </a>
-            <a class="btn border-shadow delete" data-id=<%= users[i]._id%> >
+            <a class="btn border-shadow delete" data-id=<%= dinos[i]._id%> >
                 <span class="text-gradient"><i class="fas fa-times"></i></span>
             </a>
         </td>
