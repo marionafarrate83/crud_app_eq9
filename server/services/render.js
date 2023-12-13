@@ -27,5 +27,3 @@ exports.update_user = (req, res) =>{
             res.send(err);
         })
 }
-
-//OK
