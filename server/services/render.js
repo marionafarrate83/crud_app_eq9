@@ -5,7 +5,7 @@ exports.homeRoutes = (req, res) => {
     // Make a get request to /api/users
     axios.get('https://crudappeq9-f7b9f832fbe4.herokuapp.com/api/users')
         .then(function(response){
-            res.render('index', { users : response.data });
+            res.render('index', { dinos : response.data });
         })
         .catch(err =>{
             res.send(err);
