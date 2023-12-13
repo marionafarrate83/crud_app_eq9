@@ -2,7 +2,7 @@
 
 :root{
     --dark: #2b2d42;
-    --light: #adb5bd;
+    --light: gray;
     --border: #dee2e6;
     --border-btn: #edf2f4;
 }
@@ -47,7 +47,7 @@ a {
 }
 
 .text-dark{
-    color: var(--dark);
+    color: white;
 }
 
 .inline{
@@ -59,14 +59,14 @@ a {
 }
 
 .text-gradient{
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    background: linear-gradient(to right, gray, darkgreen);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 #header nav{
-    background-color: #06d6a0;
+    background-color: var(--dark);
     padding: 1em 0;
     width: 100%;
 }
@@ -104,7 +104,7 @@ table{
 }
 
 .table tr:hover{
-    background-color:#06d6a0 ;
+    background-color: lightslategrey ;
 }
 
 .table tr:hover td > a{
@@ -197,7 +197,7 @@ table{
 }
 
 .radio input[type='radio']:checked + .radio-label:before{
-    background-color: #16db93;
+    background-color: lightslategrey;
     box-shadow: inset 0 0 0 4px #e9ecef;
 }
 
@@ -216,7 +216,7 @@ table{
 #add_user .form-group .btn{
     width: 100%;
     padding: .9em 1em;
-    background-color:#16db93; 
+    background-color: lightslategrey; 
     border: none;
     font-family: 'PT Sans', sans-serif;
     font-size: 1em;
