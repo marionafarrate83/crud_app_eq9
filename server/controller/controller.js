@@ -1,4 +1,5 @@
 var Dinodb = require('../model/dinochar');
+var tipoDinobd = require('../model/tipodino');
 
 // create and save new user
 exports.create = (req,res)=>{
@@ -107,7 +108,7 @@ exports.delete = (req, res)=>{
         });
 }
 
-// retrieve and return all users/ retrive and return a single user
+// retrieve and return all tipos/ retrive and return a single tipoDino
 exports.findTipo = (req, res) => {
 
     if (req.query.id) {
