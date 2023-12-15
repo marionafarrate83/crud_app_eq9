@@ -27,3 +27,16 @@ exports.update_user = (req, res) =>{
             res.send(err);
         })
 }
+
+exports.homeRoutesTipo = (req, res) => {
+    // Make a get request to /api/users
+    axios.get('https://crudappeq9-f7b9f832fbe4.herokuapp.com/api/tipoDino')
+        .then(function (response) {
+            res.render('tipoDino', { tipodinos: response.data });
+        })
+        .catch(err => {
+            res.send(err);
+        })
+
+
+}

@@ -1,0 +1,8 @@
+<% for(var i = 0; i < tipodinos.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><img src="<%= tipodinos[i].imagen %>" alt="foto" height="50px"></td>
+        <td><%= tipodinos[i].descripcion %></td>
+        <td><%= tipodinos[i].alias %></td>
+    </tr>
+<% } %>

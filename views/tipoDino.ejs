@@ -7,30 +7,19 @@
     <!-- Main Site -->
     <main id="site-main">
         <div class="container">
-            <div class="box-nav d-flex justify-between">
-                <a href="/add-user" class="border-shadow">
-                    <span class="text-gradient"><i class="fa-solid fa-address-card"></i> Nuevo archivo</span>
-                </a>
-                <a href="/tipoDino" class="border-shadow">
-                    <span class="text-gradient"><i class="fa-solid fa-address-card"></i> Tipos Dinosaurios</span>
-                </a>
-            </div>
-
             <!-- form handling -->
             <form action="/" method="POST">
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
                             <th>ID</th>
-                            <th>Foto</th>
-                            <th>Nombre</th>
+                            <th>Imagen</th>
+                            <th>Descripcion</th>
                             <th>Alias</th>
-                            <th>Genero</th>
-                            <th>Acción</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <%- include('include/_show') %>
+                        <%- include('include/_showtipoDino') %>
                     </tbody>
                 </table>
             </form>

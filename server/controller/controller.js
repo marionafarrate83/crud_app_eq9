@@ -106,3 +106,34 @@ exports.delete = (req, res)=>{
             });
         });
 }
+
+// retrieve and return all users/ retrive and return a single user
+exports.findTipo = (req, res) => {
+
+    if (req.query.id) {
+        const id = req.query.id;
+
+        tipoDinobd.findById(id)
+            .then(data => {
+                if (!data) {
+                    res.status(404).send({ message: "No se encopntró al tipoDino con el id " + id })
+                } else {
+                    res.send(data)
+                }
+            })
+            .catch(err => {
+                res.status(500).send({ message: "Ocurrió un error al consultar el tipoDino con el id " + id })
+            })
+
+    } else {
+        tipoDinobd.find()
+            .then(tipoDino => {
+                res.send(tipoDino)
+            })
+            .catch(err => {
+                res.status(500).send({ message: err.message || "Ocurrió un error al consultar el archivo." })
+            })
+    }
+
+
+}
